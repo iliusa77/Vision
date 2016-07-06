@@ -688,16 +688,16 @@ class CampaignView(MyModelView):
         'repair_date',
     ]
     form_ajax_refs = {
-        'created_by': {'fields': (User.name,)},
-        'performed_by': {'fields': (User.name,)},
-        'recommended_by': {'fields': (User.name,)},
-        'recommendation': {'fields': (Recommendation.name,)},
-        # 'equipment': {'fields': (Equipment.equipment_number,)},
-        'material': {'fields': (Material.name,)},
-        'fluid_type': {'fields': (FluidType.name,)},
-        'lab': {'fields': (Lab.name,)},
-        'contract': {'fields': (Contract.name,)},
-        'lab_contract': {'fields': (Contract.name,)},
+        'created_by': {'fields': (User.name,), 'placeholder': 'Please select user'},
+        'performed_by': {'fields': (User.name,), 'placeholder': 'Please select user'},
+        'recommended_by': {'fields': (User.name,), 'placeholder': 'Please select user'},
+        'recommendation': {'fields': (Recommendation.name,), 'placeholder': 'Please select recommendation'},
+        # 'equipment': {'fields': (Equipment.equipment_number,), 'placeholder': 'Please select equipment'},
+        'material': {'fields': (Material.name,), 'placeholder': 'Please select material'},
+        'fluid_type': {'fields': (FluidType.name,), 'placeholder': 'Please select fluid type'},
+        'lab': {'fields': (Lab.name,), 'placeholder': 'Please select lab'},
+        'contract': {'fields': (Contract.name,), 'placeholder': 'Please select contract'},
+        'lab_contract': {'fields': (Contract.name,), 'placeholder': 'Please select contract'},
     }
     def __init__(self, dbsession):
         super(CampaignView, self).__init__(
